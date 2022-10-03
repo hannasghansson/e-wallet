@@ -368,17 +368,31 @@ footer{
     text-align: center;
     padding: 2rem;
     color:#fff;
-   
-
     background-color: #333;
 }
 
 /*Cards*/
 
 /*card*/
-.card{
+.cardsList{    
+   
+}
+
+.activeCard{
 
 }
+
+
+
+.InactiveCard{
+
+    
+}
+
+.buttons{
+    padding:10px;
+}
+
 .cardHolder{
     height: 270px;
     width: 450px;
