@@ -117,16 +117,34 @@ function AddCard() {
                     <div className='frontDisplay'>
                         <p id='Display-Vendor'>Vendor</p>
                         <p id='Display-Type'>Type</p>
-                        <div align="left" class="sci">
+                        <div align='left' className='imgS'>
                             <img src="https://img.pngio.com/chip-png-free-download-fourjayorg-chip-png-2400_2400.png" class="chip"></img>
                         </div>
-                        <p id="Display-Cardholder">{user.first} {user.last}</p>
                         <p id="Display-CardNumber">XXXX XXXX XXXX</p>
-                        <p id="card-date-display"> Vaild Thru <span id='monthDisplay'>XX</span> / <span id='yearDisplay'>XX</span></p>
-                        <p id="card-CVC-display">CVC XXX </p>
+                        <p id="card-date-display"> <span id='vaildThru'>Vaild Thru</span> <span id='monthDisplay'>XX </span> / <span id='yearDisplay'>XX</span></p>
+                        <p id="Display-Cardholder">{user.first} {user.last}</p>
+                       { /*<p id="card-CVC-display">CVC XXX </p>*/}
                     </div>
+
+                    <div className='backDisplay'>
+                        <p className='strip-black'></p>
+
+                        <div className='backText'>
+                            <p id="card-CVC-display">CVC</p>
+                            <p className='terms'>
+                                <span className='big'>This card is property of Unicorn Bank, Wonderland. Misuse is criminal offence.</span> If found, please return to Monzo Bank or to the nearest bank with MasterCard logo.
+                                Use of this card is subject to the credit card agreement.
+                            </p>
+                        </div>
+
+                    </div>
+
                 </div>
- 
+
+                
+
+                
+                    
 
 
                 <form className='AddCard-Form' onSubmit={sendCardinfo}>
