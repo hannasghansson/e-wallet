@@ -4,26 +4,80 @@
     margin: 0;
     padding: 0;
     font-weight: 200;
+   
 }
 
 .headning{
     width: 100%;
-    height: 10rem;
+    height: auto;
     text-align: center;
-    padding: 5rem;
+    padding-top: 2rem;
+
+   
 }
 
-.toUpperCase{
+.btn-back{
+    color:rgb(196, 196, 196);
+    font-size: 2rem;
+    margin-left:3rem;
+    border: none;
+    background-color: transparent;
+    padding-left: 0.5rem;
+
+}
+
+.btn-back:hover{
+    color: black;
+    transform: scale(1.2);
+}
+
+
+h3{
+    font-size:5rem;
+    color: #333;
     text-transform: uppercase;
+    letter-spacing: 1rem;
+   
 }
 
-
-
-
-button{
-    padding: 1rem;
-    margin: 1rem 1rem;
+h4{
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 1rem;
+    letter-spacing: 1px;
 }
+
+h5{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    
+
+}
+
+span{
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+.activeCard-Content,
+.InactiveCard-Content{
+    margin-bottom: 1rem;
+}
+
+h6{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 2rem;
+    font-size: 15px;
+    font-weight: 400;
+}
+
 
 
 /*HOME PAGE*/
@@ -31,6 +85,7 @@ button{
 .Home-Page  {
     width: 100%;
     height: 100vh;
+    
 }
 
 video {
@@ -50,6 +105,7 @@ video {
   justify-content: center;
   align-items: center;
   color: white;
+  color:#fbfbfb;
 }
   
 .overlay {
@@ -69,15 +125,18 @@ video {
     
 }
 
-.homeHeading p {
+.homeHeading h2 {
     padding-left: 44%;
     margin-bottom: 4rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
+    font-size: medium;
 }
 
 .btnHome {
+    padding: 1rem;
+    margin: 1rem 1rem;
     border: none;
     min-height: 1rem;
     min-width: 10rem;
@@ -96,129 +155,100 @@ video {
 }
 
 
-/*Cards*/
-
 
 /*ADD CARD*/
 
-.AddCard{
-    display: block;
-    text-align: center;
+
+
+/*Form*/
+.Continer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+   
 }
 
-.new-card-Display{
-    margin-bottom: 4rem;
+.creditcard{
+    min-width:auto;
+    height: 10rem;
+    border: 2px solid red;
+    text-align: right;
+    margin-left: 50%;
+    
 }
-
-.new-card-display-Headning,
-.AddCard-Form-Heading {
-    padding: 2rem 0 1rem 0rem;
-    text-align: center;
-}
-
-h3 {
-    border-bottom: 0.5px solid rgb(232, 44, 44);
-
-}
-
-.Card{
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;  
-}
-
-.display-content{
-   background-color: lightblue;
-   border: 3px solid black;
-   padding: 2rem;
-   width: 25rem;
-   height: 13rem;
-   border-radius: 10px;
-
-}
-
-#Display-Vendor{
-    margin-left:10rem;
-    font-size: large;
-    color: red;
-}
-
-#card-name-display{
-    text-transform: uppercase;
-}
-
-/* FORM */
 
 
 form {
-    background-color: rgb(179, 113, 28);
-    width: 25rem;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    text-transform: uppercase;
+    min-width:60%;
+    margin-right: 50%;
+    
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 4rem;
+
 }
 
-input[type=text] {
+
+input[type=text], select {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-}
-
-.bankName, 
-.cardNumber {
-    margin-bottom: 0.5rem;
-   
-}
-
-
-
-.cardType{
-    margin-bottom: 5px;
-}
-
-
-.row {
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-}
-
-.btn{
-    width: 100%;
-    margin-bottom: 20px;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.Btn-AddCard {
-
-    width: 70%;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-
-
-    min-height: 1rem;
-    min-width: 10rem;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 0.1rem;
+    margin-bottom: 0.8rem;
     
-    border: 0.5px solid black;
-   
-    border-radius: 3px;
-    cursor: pointer;
-
-    background: transparent;
-   
-    font-size: 10px;
-   
 }
 
-#cvc{
-    Width: 5rem;
+.field-container{
+    
+    
 }
 
 
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+}  
+
+.btn-Add{
+    margin-top:1rem;
+    
+}
+
+.Btn-AddCard{
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #333;
+    color:#fff;
+    font-weight: 700;
+}
+
+footer{
+    margin-top:3rem;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 2rem;
+    color:#fff;
+   
+
+    background-color: #333;
+}
+
+h7{
+
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}

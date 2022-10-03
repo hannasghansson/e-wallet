@@ -17,19 +17,19 @@ function AddCard() {
 
 
 
-    const handleBankName = (e) => {
-        const handleBankName = document.querySelector('#Display-Vendor')
-        handleBankName.innerText = e.target.value
+    const handleVendor = (e) => {
+        const handleVendor = document.querySelector('#Display-Vendor')
+        handleVendor.innerText = e.target.value
     }
 
-    const handleCardType = (e) => {
-        const handleCardType = document.querySelector('#card-type-display')
-        handleCardType.innerText = e.target.value
+    const handleType = (e) => {
+        const handleType = document.querySelector('#Display-Type')
+        handleType.innerText = e.target.value
     }
 
 
     const handleCardNumber = (e) => {
-        const cardNumber = document.querySelector('#card-cardnumber-display')
+        const cardNumber = document.querySelector('#Display-CardNumber')
         cardNumber.innerText = e.target.value
     }
 
@@ -98,52 +98,51 @@ function AddCard() {
         <div className="AddCard">
             
             <div className="headning">
-                <h1>AddCard.jsx</h1>
-                <h2>Lägg till nytt kort</h2>
+                <h3>E-wallet</h3>
+                <h4>Add a <span> new Card </span> to your e-wallet</h4>
+            </div>
+            
+
+            <div className="back-btn">
+                <Link style={{textDecoration: "none"}} to="/Cards"><button className='btn-back'><i className="fa-solid fa-arrow-left"></i></button> </Link>
             </div>
 
-
-
-            <div className='new-card-Display'>
-                <div className="new-card-display-Headning">
-                    <h3>Card Dispaly</h3>
-                </div>
-
-                <div className='Card'>
-                    <div className='display-content'>
-                        <p id='Display-Vendor'>Vendor:</p>
-                        <p id='card-type-display'>Type:</p>
-                        <p id="card-name-display">First & Lastname: {user.first} {user.last}</p>
-                        <p id="card-cardnumber-display">Cardnumber: XXXX XXXX XXXX</p>
-                        <p id="card-date-display"> Vaild Thru: <span id='monthDisplay'>XX</span> / <span id='yearDisplay'>XX</span></p>
-                        <p id="card-CVC-display">CVC: XXX </p>
-                    </div>
-                </div>
-
+        
+            <div className='infoText'>
+                <h6>To add your new card, fill in the information in the boxes</h6>
             </div>
 
-
-
-                <form className="AddCard-Form" onSubmit={sendCardinfo}>
-                    <div className='AddCard-Form-Heading'>
-                        <h3>Form - New card</h3> 
+            <div className='Continer'>
+                <div className='creditcard'>
+                    <div className='frontDisplay'>
+                        <p id='Display-Vendor'>Vendor</p>
+                        <p id='Display-Type'>Type</p>
+                        <p id="Display-Cardholder">{user.first} {user.last}</p>
+                        <p id="Display-CardNumber">XXXX XXXX XXXX</p>
+                        <p id="card-date-display"> Vaild Thru <span id='monthDisplay'>XX</span> / <span id='yearDisplay'>XX</span></p>
+                        <p id="card-CVC-display">CVC XXX </p>
                     </div>
+                </div>
+ 
 
-                    <div className='bankName'>
-                        <label htmlFor="Display-Vendor">Vendor </label>
-                        <select onChange={(e) => handleBankName(e)} id='vendor' className='vendor' required defaultValue={''}>
+
+                <form className='AddCard-Form' onSubmit={sendCardinfo}>
+
+                    <div className='field-container'>
+                        <label htmlFor="label-Vendor">Vendor</label>
+                        <select onChange={(e) => handleVendor(e)} id='vendor' className='vendor' required defaultValue={''}>
                             <option value="" disabled hidden>Choose</option>
                             <option value="Handelsbanken">Handelsbanken</option>
-                            <option value="Swedbank">Swedbank</option>
-                            <option value="Nordea">Nordea</option>
-                            <option value="Länsförsäkringar Bank">Länsförsäkringar Bank</option>
+                            <option value="Swedbank Bank">Swedbank</option>
+                            <option value="Nordea Bank">Nordea</option>
+                            <option value="Länsförsäkringar">Länsförsäkringar</option>
                         </select>
-                    </div>
+  
 
 
-                    <div className='cardType'>
-                        <label htmlFor="card-type-display">Card Type</label>
-                        <select onChange={(e) => handleCardType(e)} id='cardType' className='cardType' required defaultValue={''}>
+                    
+                        <label htmlFor="Display-Type">Card Type</label>
+                        <select onChange={(e) => handleType(e)} id='cardType' className='cardType' required defaultValue={''}>
                             <option value="" disabled  hidden>Choose</option>
                             <option value="Bankkort">Bankkort</option>
                             <option value="Allkort">Allkort</option>
@@ -153,15 +152,15 @@ function AddCard() {
 
 
 
-                    <div className="cardNumber">
-                        <label htmlFor="cardnumber">Cardnumber </label>
+                    <div className='card-container'>
+                        <label htmlFor="cardnumber">Card Number </label>
                         <input onChange={(e) => handleCardNumber(e)}  id="cardnumber" type="text" name="card-number" placeholder='XXXX-XXXX-XXXX-XXXX' pattern="[0-9]{16}" maxLength={16} required />
                     </div>
 
 
                     <div className='row'> 
                         <div className='ValidThru-Month'>
-                            <label htmlFor="Valid">Month</label>
+                            <label htmlFor="Valid">Expiration Month</label>
                             <select onChange={(e) => ValidThruMonth(e)} id='expireMonth' name='expireMonth' >
                             <option value="">Month</option>
                                 {['1','2','3','4','5','6','7','8','9','11','12'].map((month, index) => <option key={index}>{month}</option>)}
@@ -169,28 +168,38 @@ function AddCard() {
                         </div>
 
                         <div className='ValidThru-Year'>
-                            <label htmlFor="Valid">Year</label>
+                            <label htmlFor="Valid">Expiration Date</label>
                             <select onChange= {(e) => ValidThruYear(e)} id='expireYear' name='year'  placeholder='Year' pattern="[0-9]{16}" maxLength={16} >
                             <option value="">Year</option>
                                 {['22','23','24','25'].map((year,index) => <option key={index}>{year}</option>)}                            </select>
                         </div>
-                        
+
                         <div className="input">
                             <label htmlFor="CVCnumber" type='number'>CVC</label>
                             <input onChange={(e) => handleCVCnumber(e)} id="cvc" type="text" name="CVC-number" placeholder="XXX" pattern="[0-9]{3}" maxLength={3} required />
                         </div>
                     </div>
 
+                        
+
+                    
+
                     <div className='btn-Add'>
                         <button type='submit' className='Btn-AddCard'>Add new Card</button>
                     </div>
 
-                    <div className="AddCard-box">
-                        <Link style={{textDecoration: "none"}} to="/Cards"><button className='AddCard-Btn'>Back</button> </Link>
-                    </div>
-
                 </form>
+
             </div>
+
+
+            <footer>
+                <h7>Footer</h7>
+            </footer>
+
+        </div>
+
+
 
      ); 
 } 

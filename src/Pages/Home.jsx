@@ -14,7 +14,7 @@ function Home() {
             <div className="Content">
                 <div className="homeHeading">
                     <h1> E-Wallet </h1>
-                    <p>Your digital wallet</p>
+                    <h2>Your digital wallet</h2>
                 </div>
                
                 <div className="BtnBox">
