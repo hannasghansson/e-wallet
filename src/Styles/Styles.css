@@ -1,0 +1,224 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+}
+
+.headning{
+    width: 100%;
+    height: 10rem;
+    text-align: center;
+    padding: 5rem;
+}
+
+.toUpperCase{
+    text-transform: uppercase;
+}
+
+
+
+
+button{
+    padding: 1rem;
+    margin: 1rem 1rem;
+}
+
+
+/*HOME PAGE*/
+
+.Home-Page  {
+    width: 100%;
+    height: 100vh;
+}
+
+video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+  
+
+.Content {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+
+}
+
+.homeHeading h1 {
+    font-size: 6rem;
+    background-color: black;
+    padding: 1rem 2rem 1rem 2rem;
+    
+}
+
+.homeHeading p {
+    padding-left: 44%;
+    margin-bottom: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.btnHome {
+    border: none;
+    min-height: 1rem;
+    min-width: 10rem;
+    background: transparent;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    cursor:pointer;
+    font-size: 15px;
+    border: 3px solid;
+    border-image: linear-gradient(45deg, purple, orange)1;
+}
+
+.btnHome:hover {
+    transform: scale(1.2);
+}
+
+
+/*Cards*/
+
+
+/*ADD CARD*/
+
+.AddCard{
+    display: block;
+    text-align: center;
+}
+
+.new-card-Display{
+    margin-bottom: 4rem;
+}
+
+.new-card-display-Headning,
+.AddCard-Form-Heading {
+    padding: 2rem 0 1rem 0rem;
+    text-align: center;
+}
+
+h3 {
+    border-bottom: 0.5px solid rgb(232, 44, 44);
+
+}
+
+.Card{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;  
+}
+
+.display-content{
+   background-color: lightblue;
+   border: 3px solid black;
+   padding: 2rem;
+   width: 25rem;
+   height: 13rem;
+   border-radius: 10px;
+
+}
+
+#Display-Vendor{
+    margin-left:10rem;
+    font-size: large;
+    color: red;
+}
+
+#card-name-display{
+    text-transform: uppercase;
+}
+
+/* FORM */
+
+
+form {
+    background-color: rgb(179, 113, 28);
+    width: 25rem;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.bankName, 
+.cardNumber {
+    margin-bottom: 0.5rem;
+   
+}
+
+
+
+.cardType{
+    margin-bottom: 5px;
+}
+
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+.btn{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.Btn-AddCard {
+
+    width: 70%;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+
+
+    min-height: 1rem;
+    min-width: 10rem;
+    
+    border: 0.5px solid black;
+   
+    border-radius: 3px;
+    cursor: pointer;
+
+    background: transparent;
+   
+    font-size: 10px;
+   
+}
+
+#cvc{
+    Width: 5rem;
+}
+
+

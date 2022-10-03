@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './Styles/Styles.css'
+
+import React from 'react';
+import { Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react';
+
+import Home from './Pages/Home';
+import Cards from './Pages/Cards';
+import AddCard from './Pages/AddCard';
+
+import {getUser} from './Redux/SliceUser';
+import  { useDispatch } from 'react-redux';
+
 
 function App() {
+
+  const dispatch = useDispatch() 
+  useEffect(() => {
+    dispatch(getUser());
+    
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Cards" element={<Cards />} />
+        <Route path="/AddCard" element={<AddCard />} />
+      </Routes>
     </div>
   );
 }
