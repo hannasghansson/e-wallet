@@ -117,6 +117,9 @@ function AddCard() {
                     <div className='frontDisplay'>
                         <p id='Display-Vendor'>Vendor</p>
                         <p id='Display-Type'>Type</p>
+                        <div align="left" class="sci">
+                            <img src="https://img.pngio.com/chip-png-free-download-fourjayorg-chip-png-2400_2400.png" class="chip"></img>
+                        </div>
                         <p id="Display-Cardholder">{user.first} {user.last}</p>
                         <p id="Display-CardNumber">XXXX XXXX XXXX</p>
                         <p id="card-date-display"> Vaild Thru <span id='monthDisplay'>XX</span> / <span id='yearDisplay'>XX</span></p>
@@ -145,10 +148,11 @@ function AddCard() {
                         <select onChange={(e) => handleType(e)} id='cardType' className='cardType' required defaultValue={''}>
                             <option value="" disabled  hidden>Choose</option>
                             <option value="Bankkort">Bankkort</option>
-                            <option value="Allkort">Allkort</option>
+                            <option value="Kreditkort">Kreditkort</option>
                             <option value="Platinakort">Platinakort</option>
                         </select>
                     </div>
+
 
 
 

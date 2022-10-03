@@ -78,6 +78,18 @@ h6{
     font-weight: 400;
 }
 
+h7{
+
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
 
 
 /*HOME PAGE*/
@@ -169,14 +181,45 @@ video {
 }
 
 .creditcard{
+   /*
     min-width:auto;
     height: 10rem;
     border: 2px solid red;
+    border-radius: 7px;
+    background-color: #f2f2f2;
     text-align: right;
     margin-left: 50%;
-    
+    padding:1rem;
+    */
+
+    height: 270px;
+    width: 450px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);  /* This will produce the blur */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-left: 30%;
+    padding:2rem;
 }
 
+/*Handeslebanken*/
+#Display-Vendor{
+    margin-left: 60%;
+    font-size: 1.5rem;
+}
+
+#Display-Type{
+    margin-left: 60%;
+    text-align: end;
+
+}
+
+img.chip {
+    height: 40px;
+    width: 40px;
+}
 
 form {
     min-width:60%;
@@ -184,7 +227,7 @@ form {
     
     border-radius: 5px;
     background-color: #f2f2f2;
-    padding: 4rem;
+    padding: 2rem;
 
 }
 
@@ -240,15 +283,3 @@ footer{
     background-color: #333;
 }
 
-h7{
-
-    width: 100%;
-    height: auto;
-    text-align: center;
-    padding: 2rem;
-    font-size: 2rem;
-    font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-}
