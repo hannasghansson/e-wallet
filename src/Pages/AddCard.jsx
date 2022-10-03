@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from "react-router"
 
 import { addCard } from "../Redux/SliceCards"
 
+import wifi from '../Assets/wifi.png'
 
 
 function AddCard() {
@@ -119,12 +120,12 @@ function AddCard() {
                         <p id='Display-Type'>Type</p>
                         <div align='left' className='imgS'>
                             <img src="https://img.pngio.com/chip-png-free-download-fourjayorg-chip-png-2400_2400.png" class="chip"></img>
+                            <img className='waves'src={wifi} alt="chip"></img>
                         </div>
-                        <p id="Display-CardNumber">XXXX XXXX XXXX</p>
-                        <p id="card-date-display"> <span id='vaildThru'>Vaild Thru</span> <span id='monthDisplay'>XX </span> / <span id='yearDisplay'>XX</span></p>
-                        <p id="Display-Cardholder">{user.first} {user.last}</p>
-                       { /*<p id="card-CVC-display">CVC XXX </p>*/}
-                    </div>
+                            <p id="Display-CardNumber">XXXX XXXX XXXX</p>
+                            <p id="card-date-display"> <span id='vaildThru'>Vaild Thru</span> <span id='monthDisplay'>XX </span> / <span id='yearDisplay'>XX</span></p>
+                            <p id="Display-Cardholder">{user.first} {user.last}</p>
+                        </div>
 
                     <div className='backDisplay'>
                         <p className='strip-black'></p>
@@ -136,9 +137,7 @@ function AddCard() {
                                 Use of this card is subject to the credit card agreement.
                             </p>
                         </div>
-
                     </div>
-
                 </div>
 
                 
@@ -154,7 +153,7 @@ function AddCard() {
                         <select onChange={(e) => handleVendor(e)} id='vendor' className='vendor' required defaultValue={''}>
                             <option value="" disabled hidden>Choose</option>
                             <option value="Handelsbanken">Handelsbanken</option>
-                            <option value="Swedbank Bank">Swedbank</option>
+                            <option value="Swedbank">Swedbank</option>
                             <option value="Nordea Bank">Nordea</option>
                             <option value="Länsförsäkringar">Länsförsäkringar</option>
                         </select>

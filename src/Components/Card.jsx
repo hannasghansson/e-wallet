@@ -1,8 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { makeActive, removeCard} from "../Redux/SliceCards"
 
+import wifi from '../Assets/wifi.png'
 
-
+//<div> Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry"> Kiranshastry </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
 
 function Card (props){
 
@@ -14,16 +15,24 @@ function Card (props){
 
     return (
 
-        <div>           
-            <p>Vendor: {props.data.Vendor}</p>
-            <p>Type:  {props.data.Type}</p>
+        <div className='card'>
+            <div className='cardHolder'>
+                <div align='right'>
+                    <p className='Vendor-card'>{props.data.Vendor}</p>
+                    <p className='Type-card'>{props.data.Type}</p>
+                </div>
 
-            <p>Cardnumber: {props.data.CardNumber}</p>
+                <div align='left' className='imgS'>
+                    <img src="https://img.pngio.com/chip-png-free-download-fourjayorg-chip-png-2400_2400.png" class="chip"></img>
+                    <img className='waves'src={wifi} alt="chip"></img>
+                </div>
+                <p className='cardNumber-card'>{props.data.CardNumber}</p>
 
-            <p className='toUpperCase'>Cardholder:{user.first} {user.last}</p>
-            <p>Valid: {props.data.Month} / {props.data.Year} </p>
-            <p>CVC: {props.data.cvc}</p> 
-
+                <p className='date-card'><span className='vaildThru-card'>Vaild Thru</span>{props.data.Month} / {props.data.Year} </p>
+                <p className='cardholder-card'>{user.first} {user.last}</p>
+            </div>
+        
+            
             {!props.data.active &&  <div className='buttons'>
                 <button onClick={() => { dispatch(makeActive(props.data.id)); }}>Aktivera kort</button>
                 <button onClick={() => { dispatch(removeCard(props.data.id)); }}>Radera kort</button>

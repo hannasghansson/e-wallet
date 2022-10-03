@@ -54,7 +54,7 @@ import Card from '../Components/Card'
             <div className="Cards-to-AddCard-Btn">
             {(cardInfo.length < 4) ? <Link style={{textDecoration: "none"}} to="/AddCard"><button className='AddCard-Btn'>Go to Add Card</button> </Link> : <p className='max-msg'>You have added the maximum amount of cards</p>}
             </div>
-            
+
             <footer>
                 <h7>Footer</h7>
             </footer>

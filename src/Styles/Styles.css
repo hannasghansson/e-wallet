@@ -116,8 +116,8 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
-  color:#fbfbfb;
+  color:#ccc;
+  
 }
   
 .overlay {
@@ -153,7 +153,7 @@ video {
     min-height: 1rem;
     min-width: 10rem;
     background: transparent;
-    color: white;
+    color:#ccc;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     cursor:pointer;
@@ -173,8 +173,7 @@ video {
 .Continer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 3rem;
-   
+    grid-gap: 3rem;  
 }
 
 /*Frontside Card*/
@@ -188,7 +187,7 @@ video {
     margin-left: 30%;
     padding:2rem;
     background: linear-gradient(-125deg, #1D3349, #071524 55%);
-    color: #fff;
+    color:#ccc;
 
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
@@ -201,8 +200,9 @@ video {
 
 /*Handeslebanken*/
 #Display-Vendor{
-    margin-left: 55%;
-    font-size: 1.7rem;
+
+    text-align: end;
+    font-size: 1.5rem;
 }
 
 #Display-Type{
@@ -229,7 +229,7 @@ img.chip {
 #card-date-display{
     width: 100%;
     text-align: right;   
-    color: #fff;
+    color:#ccc
 }
 
 #vaildThru{
@@ -238,12 +238,12 @@ img.chip {
     text-align: center;
     display: inline-block;
     text-transform: uppercase;  
-    color: #fff; 
+    color:#ccc 
 }
 
 #monthDisplay, #yearDisplay{
     font-size: 15px;
-    color: #fff;
+    color:#ccc
 }
 
 #Display-Cardholder{
@@ -264,7 +264,7 @@ img.chip {
     width: 450px;
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.2);
-
+    
     overflow: hidden;
     margin-left: 30%;
     background: linear-gradient(-125deg, #1D3349, #071524 55%);
@@ -291,24 +291,25 @@ img.chip {
     font-family: 'cc font', monospace;
     width: 60%;
     height: 2.5rem;
-    background: #fff;
+    color:rgb(90, 90, 90);
     margin-bottom: 1rem;
     text-align: left;
     text-align: end;
     font-size: 1rem;
     border-radius: 2px;
+    background-color: #fff;
 }
 
 .terms {
     font-size: 10px;
     width: 60%;
-    color: #fff;
+    color:#ccc
 }
 
 .big{
     text-transform: uppercase;
     letter-spacing: 0.1px;
-    color: #fff;
+    color:#ccc
 }
 
 
@@ -372,3 +373,76 @@ footer{
     background-color: #333;
 }
 
+/*Cards*/
+
+/*card*/
+.card{
+
+}
+.cardHolder{
+    height: 270px;
+    width: 450px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    padding: 2rem;
+    background: linear-gradient(-125deg, #1D3349, #071524 55%);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    border: 1px solid rgb(210, 210, 210);
+    color:#ccc
+}
+
+.Vendor-card{
+    margin-left: 55%;
+    font-size: 1.7rem;
+}
+
+.Type-card{
+    margin-left: 60%;
+    text-align: end;
+}
+.cardNumber-card{
+    font-family: 'cc font', monospace;
+    margin-top: 5px;
+    font-size: 2rem;
+   
+}
+
+.date-card{
+    margin-top:10px;
+    width: 100%;
+    text-align: right;   
+    color:#ccc
+}
+.vaildThru-card{
+    width: 40px;
+    font-size: 6px;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;  
+    color:#ccc
+}
+
+.cardholder-card{
+    text-transform: uppercase;
+    font-family: 'cc font', monospace;
+    margin-top:.5rem;
+    letter-spacing: 0.3rem;
+    font-size: 1.3rem;
+}
+
+.cardsList{
+    margin: 40px 0 40px 0;
+}
+
+.waves{
+    display: inline-block;
+    width:8%;
+    height:8%;
+    transform: rotate(90deg);
+    margin-left:10px;
+    margin-bottom:5px;
+    filter: brightness(50%);
+}
