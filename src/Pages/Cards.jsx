@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
-
 import { useSelector } from 'react-redux'
 
 import Card from '../Components/Card'
+import fb from '../Assets/facebook.png'
+import insta from '../Assets/instagram.png'
+import tw from '../Assets/twitter.png'
+
     
     const Cards = () => {
 
@@ -16,9 +19,15 @@ import Card from '../Components/Card'
                 <h3>E-wallet</h3>
                 <h4>all <span> your </span> cards</h4>
             </div>
-
-            <div className="back-btn">
+            
+            <nav>
                 <Link style={{textDecoration: "none"}} to="/"><button className='btn-back'><i className="fa-solid fa-arrow-left"></i></button> </Link>
+            </nav>
+
+
+
+            <div className='addCard-Continer'>
+                {(cardInfo.length < 4) ? <Link style={{textDecoration: "none"}} to="/AddCard"><button className='AddCard-Btn'>Go to Add Card</button> </Link> : <p className='max-msg'>You have added the maximum amount of cards</p>}
             </div>
             
             <div className='cardsList'>
@@ -51,12 +60,16 @@ import Card from '../Components/Card'
                 </div>
             </div>
 
-            <div className="Cards-to-AddCard-Btn">
-            {(cardInfo.length < 4) ? <Link style={{textDecoration: "none"}} to="/AddCard"><button className='AddCard-Btn'>Go to Add Card</button> </Link> : <p className='max-msg'>You have added the maximum amount of cards</p>}
-            </div>
+
 
             <footer>
                 <h7>Footer</h7>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <div className='sociala'>
+                    <img className='tw-img'src={tw} alt='twitter'></img>
+                    <img className='insta-img'src={insta} alt='instagram'></img>
+                    <img className='fb-img'src={fb} alt='facebook'></img>
+                </div>
             </footer>
 
         </div>

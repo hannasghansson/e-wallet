@@ -12,8 +12,6 @@
     height: auto;
     text-align: center;
     padding-top: 2rem;
-
-   
 }
 
 .btn-back{
@@ -66,8 +64,9 @@ span{
 
 .activeCard-Content,
 .InactiveCard-Content{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
+
 
 h6{
     width: 100%;
@@ -361,17 +360,21 @@ input[type=text], select {
     font-weight: 700;
 }
 
-footer{
-    margin-top:3rem;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    padding: 2rem;
-    color:#fff;
-    background-color: #333;
-}
+
 
 /*Cards*/
+nav {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+
+.addCard-Continer{
+    height: 20px;
+    width: 100%;
+    background-color: #1D3349;
+    min-height: 15rem;
+}
 
 /*card*/
 .cardsList{    
@@ -448,7 +451,10 @@ footer{
 }
 
 .cardsList{
-    margin: 40px 0 40px 0;
+    
+    margin: auto;
+    width: 35%;
+    padding: 10px;
 }
 
 .waves{
@@ -459,4 +465,26 @@ footer{
     margin-left:10px;
     margin-bottom:5px;
     filter: brightness(50%);
+}
+
+/* Footer */
+
+footer{
+    margin-top:3rem;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 2rem;
+    color:#fff;
+    background-color:#071524;
+}
+
+footer p{
+    padding: 1rem 10rem 1rem 10rem;
+    color:#ccc;
+}
+
+footer img{
+    margin:1rem;
+    width: 30px;
 }

@@ -6,6 +6,9 @@ import { useLocation, useNavigate } from "react-router"
 import { addCard } from "../Redux/SliceCards"
 
 import wifi from '../Assets/wifi.png'
+import fb from '../Assets/facebook.png'
+import insta from '../Assets/instagram.png'
+import tw from '../Assets/twitter.png'
 
 
 function AddCard() {
@@ -103,10 +106,9 @@ function AddCard() {
                 <h4>Add a <span> new Card </span> to your e-wallet</h4>
             </div>
             
-
-            <div className="back-btn">
+            <nav>
                 <Link style={{textDecoration: "none"}} to="/Cards"><button className='btn-back'><i className="fa-solid fa-arrow-left"></i></button> </Link>
-            </div>
+            </nav>
 
         
             <div className='infoText'>
@@ -216,6 +218,12 @@ function AddCard() {
 
             <footer>
                 <h7>Footer</h7>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <div className='sociala'>
+                    <img className='tw-img'src={tw} alt='twitter'></img>
+                    <img className='insta-img'src={insta} alt='instagram'></img>
+                    <img className='fb-img'src={fb} alt='facebook'></img>
+                </div>
             </footer>
 
         </div>
